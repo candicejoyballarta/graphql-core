@@ -4,7 +4,7 @@ const Banners = [
 		txtHeader: 'WHERE TO BUY TRANSITIONS®',
 		txtDescription:
 			'Locate an eye care professional near you or online and ask about Transitions® Light Intelligent Lenses™.',
-		imgBackground: './assets/img1.webp',
+		imgBackground: '../assets/img1.webp',
 		buttons: [
 			{
 				id: 1,
@@ -21,7 +21,7 @@ const Banners = [
 		txtHeader: 'BUY TRANSITIONS IN STORE',
 		txtDescription:
 			'Looking for the best place to buy glasses with Transitions lenses? Search for your nearest eye doctor to book an appointment.',
-		imgBackground: './assets/img2.webp',
+		imgBackground: '../assets/img2.webp',
 		buttons: [
 			{
 				id: 1,
@@ -34,7 +34,7 @@ const Banners = [
 		txtHeader: 'BUY TRANSITIONS ONLINE',
 		txtDescription:
 			'Looking for the best place to buy glasses with Transitions lenses online? Find our certified sellers here.',
-		imgBackground: './assets/img3.webp',
+		imgBackground: '../assets/img3.webp',
 		buttons: [
 			{
 				id: 1,
@@ -44,10 +44,11 @@ const Banners = [
 	},
 	{
 		id: 4,
+		imgHeader: '../assets/certified.webp',
 		txtHeader: 'TRAINED SPECIALISTS READY TO ADVISE YOU',
 		txtDescription:
 			'Transitions Certified Providers are trained and equipped to recommend the perfect Transitions lenses to all their patients.',
-		imgBackground: './assets/img4.webp',
+		imgBackground: '../assets/img4.webp',
 	},
 ];
 
@@ -66,7 +67,7 @@ const VidBanners = [
 	{
 		id: 2,
 		txtHeader: 'PAIR YOUR FAVORITE FRAME WITH THE PERFECT LENS.',
-		vidBackground: './assets/vid6.webm',
+		vidBackground: '../assets/vid6.webm',
 		buttons: [
 			{
 				id: 1,

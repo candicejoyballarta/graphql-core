@@ -6,11 +6,13 @@ const {
 	GraphQLString,
 	GraphQLNonNull,
 	GraphQLList,
+	GraphQLSchema,
 } = require('graphql');
 
 // Banner Type
 const BannerType = new GraphQLObjectType({
 	name: 'Banner',
+	description: 'This represents a banner widget',
 	fields: () => ({
 		id: {
 			type: GraphQLNonNull(GraphQLID),
@@ -70,3 +72,31 @@ const FAQsType = new GraphQLObjectType({
 		txtAnswer: { type: GraphQLString },
 	}),
 });
+
+const RootQueryType = new GraphQLObjectType({
+	name: 'Query',
+	description: 'Root Query',
+	fields: {
+		banner: {
+			type: new GraphQLList(BannerType),
+			description: 'List of All Banners',
+			resolve: () => Banners,
+		},
+		vidBanner: {
+			type: new GraphQLList(VidBannerType),
+			description: 'List of All Video Banners',
+			resolve: () => VidBanners,
+		},
+		faqs: {
+			type: new GraphQLList(FAQsType),
+			description: 'List of All FAQs',
+			resolve: () => FAQs,
+		},
+	},
+});
+
+const schema = new GraphQLSchema({
+	query: RootQueryType,
+});
+
+module.exports = { schema };
