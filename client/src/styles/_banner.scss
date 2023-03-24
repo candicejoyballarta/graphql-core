@@ -122,9 +122,14 @@ button {
 	outline: none;
 	border: none;
 	transition: all 0.5s ease-in-out;
+	cursor: pointer;
 
 	&:disabled {
 		background-color: #c1c1c1;
+	}
+
+	&:hover {
+		background-color: #333;
 	}
 }
 
@@ -169,6 +174,7 @@ button {
 
 				input {
 					padding: 16px 16px 12px;
+					cursor: pointer;
 					border: none;
 					box-shadow: 0 0 0 1px #1c1c1c;
 					outline: none;
