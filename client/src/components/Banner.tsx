@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img1 from '../assets/img1.webp';
 import img2 from '../assets/img2.webp';
 import img3 from '../assets/img3.webp';
@@ -20,6 +20,7 @@ type Props = {
 };
 
 const Banner = (props: Props) => {
+	const [storeName, setStoreName] = useState('');
 	if (props.id == 1) {
 		return (
 			<div className='main-placement-1'>
@@ -62,19 +63,23 @@ const Banner = (props: Props) => {
 								type='text'
 								className='square-control'
 								name='store'
+								value={storeName}
+								onChange={(e) => setStoreName(e.target.value)}
 								id='store'
 								placeholder='Find a store nearby'
 							/>
 							{props.buttons?.map((btn, index) => {
 								return (
-									<button key={index}>{btn.btnText}</button>
+									<button key={index} disabled={!storeName}>
+										{btn.btnText}
+									</button>
 								);
 							})}
 						</div>
 					</div>
 					<div className='buy-image'>
 						<div className='img-wrapper'>
-							<img src={img2} alt='buy img2' />
+							<img src={props.imgBackground} alt='buy img2' />
 						</div>
 					</div>
 				</div>
@@ -99,7 +104,7 @@ const Banner = (props: Props) => {
 					</div>
 					<div className='buy-image'>
 						<div className='img-wrapper'>
-							<img src={img3} alt='buy img3' />
+							<img src={props.imgBackground} alt='buy img3' />
 						</div>
 					</div>
 				</div>
@@ -115,7 +120,10 @@ const Banner = (props: Props) => {
 						<div className='background'>
 							<div className='rel-image'>
 								<div className='img-wrapper'>
-									<img src={img4} alt='glasses' />
+									<img
+										src={props.imgBackground}
+										alt='glasses'
+									/>
 								</div>
 							</div>
 						</div>
@@ -142,6 +150,8 @@ const Banner = (props: Props) => {
 			</>
 		);
 	}
+
+	return <></>;
 };
 
 export default Banner;

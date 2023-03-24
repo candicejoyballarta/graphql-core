@@ -121,6 +121,11 @@ button {
 	padding: 0 20px;
 	outline: none;
 	border: none;
+	transition: all 0.5s ease-in-out;
+
+	&:disabled {
+		background-color: #c1c1c1;
+	}
 }
 
 .main-placement-2 {
@@ -163,9 +168,21 @@ button {
 				gap: 10px;
 
 				input {
-					border: 1px solid black;
 					padding: 16px 16px 12px;
-					border-radius: 0;
+					border: none;
+					box-shadow: 0 0 0 1px #1c1c1c;
+					outline: none;
+					height: 44px;
+					width: 350px;
+					transition: -webkit-box-shadow 0.25s ease-in-out;
+
+					&:focus {
+						outline: none;
+						box-shadow: 0 0 0 2px #1c1c1c;
+						border-radius: 0;
+						border: none;
+						appearance: none;
+					}
 				}
 			}
 		}
