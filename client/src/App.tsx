@@ -1,11 +1,22 @@
 import './styles/App.scss';
-import Banner from './components/Banner';
+import Banners from './components/Banners';
+import FAQ from './components/FAQ';
+
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+	uri: 'http://localhost:4000/graphql',
+	cache: new InMemoryCache(),
+});
 
 function App() {
 	return (
-		<div className='one-column-layout'>
-			<Banner />
-		</div>
+		<ApolloProvider client={client}>
+			<div className='one-column-layout'>
+				<Banners />
+				<FAQ />
+			</div>
+		</ApolloProvider>
 	);
 }
 

@@ -4,7 +4,7 @@ const Banners = [
 		txtHeader: 'WHERE TO BUY TRANSITIONS®',
 		txtDescription:
 			'Locate an eye care professional near you or online and ask about Transitions® Light Intelligent Lenses™.',
-		imgBackground: '../assets/img1.webp',
+		imgBackground: '/src/assets/img1.webp',
 		buttons: [
 			{
 				id: 1,
@@ -21,7 +21,7 @@ const Banners = [
 		txtHeader: 'BUY TRANSITIONS IN STORE',
 		txtDescription:
 			'Looking for the best place to buy glasses with Transitions lenses? Search for your nearest eye doctor to book an appointment.',
-		imgBackground: '../assets/img2.webp',
+		imgBackground: '/src/assets/img2.webp',
 		buttons: [
 			{
 				id: 1,
@@ -34,7 +34,7 @@ const Banners = [
 		txtHeader: 'BUY TRANSITIONS ONLINE',
 		txtDescription:
 			'Looking for the best place to buy glasses with Transitions lenses online? Find our certified sellers here.',
-		imgBackground: '../assets/img3.webp',
+		imgBackground: '/src/assets/img3.webp',
 		buttons: [
 			{
 				id: 1,
@@ -44,11 +44,68 @@ const Banners = [
 	},
 	{
 		id: 4,
-		imgHeader: '../assets/certified.webp',
+		imgHeader: '/src/assets/certified.webp',
 		txtHeader: 'TRAINED SPECIALISTS READY TO ADVISE YOU',
 		txtDescription:
 			'Transitions Certified Providers are trained and equipped to recommend the perfect Transitions lenses to all their patients.',
-		imgBackground: '../assets/img4.webp',
+		imgBackground: '/src/assets/img4.webp',
+	},
+];
+
+const Stores = [
+	{
+		id: 1,
+		txtHeader: 'Stores in New York',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/newyork.webp',
+	},
+	{
+		id: 2,
+		txtHeader: 'Stores in Los Angeles',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/losangeles.webp',
+	},
+	{
+		id: 3,
+		txtHeader: 'Stores in Chicago',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/chicago.webp',
+	},
+	{
+		id: 4,
+		txtHeader: 'Stores in Dallas',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/dallas.webp',
+	},
+	{
+		id: 5,
+		txtHeader: 'Stores in Phoenix',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/phoenix.webp',
+	},
+	{
+		id: 6,
+		txtHeader: 'Stores in Philadelphia',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/philadelphia.webp',
+	},
+	{
+		id: 7,
+		txtHeader: 'Stores in Denver',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/denver.webp',
+	},
+	{
+		id: 8,
+		txtHeader: 'Stores in San Antonio',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/sanantonio.webp',
+	},
+	{
+		id: 9,
+		txtHeader: 'Stores in Indianapolis',
+		txtLink: 'View stores',
+		imgBackground: '/src/assets/indianapolis.webp',
 	},
 ];
 
@@ -56,7 +113,7 @@ const VidBanners = [
 	{
 		id: 1,
 		txtHeader: 'CHECK YOUR LIGHT SENSITIVITY.',
-		vidBackground: './assets/vid5.webm',
+		vidBackground: '/src/assets/vid5.webm',
 		buttons: [
 			{
 				id: 1,
@@ -67,7 +124,7 @@ const VidBanners = [
 	{
 		id: 2,
 		txtHeader: 'PAIR YOUR FAVORITE FRAME WITH THE PERFECT LENS.',
-		vidBackground: '../assets/vid6.webm',
+		vidBackground: '/src/assets/vid6.webm',
 		buttons: [
 			{
 				id: 1,
@@ -109,4 +166,4 @@ const FAQs = [
 	},
 ];
 
-module.exports = { Banners, VidBanners, FAQs };
+module.exports = { Banners, VidBanners, Stores, FAQs };

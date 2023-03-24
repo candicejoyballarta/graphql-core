@@ -1,4 +1,4 @@
-const { Banners, VidBanners, FAQs } = require('../mockData');
+const { Banners, VidBanners, Stores, FAQs } = require('../mockData');
 
 const {
 	GraphQLObjectType,
@@ -54,6 +54,24 @@ const VidBannerType = new GraphQLObjectType({
 	}),
 });
 
+const StoreType = new GraphQLObjectType({
+	name: 'Store',
+	fields: () => ({
+		id: {
+			type: GraphQLNonNull(GraphQLID),
+		},
+		txtHeader: {
+			type: GraphQLString,
+		},
+		txtLink: {
+			type: GraphQLString,
+		},
+		imgBackground: {
+			type: GraphQLString,
+		},
+	}),
+});
+
 // Button Type
 const ButtonType = new GraphQLObjectType({
 	name: 'Button',
@@ -64,7 +82,7 @@ const ButtonType = new GraphQLObjectType({
 });
 
 // FAQ Type
-const FAQsType = new GraphQLObjectType({
+const FAQType = new GraphQLObjectType({
 	name: 'FAQ',
 	fields: () => ({
 		id: { type: GraphQLID },
@@ -77,18 +95,23 @@ const RootQueryType = new GraphQLObjectType({
 	name: 'Query',
 	description: 'Root Query',
 	fields: {
-		banner: {
+		banners: {
 			type: new GraphQLList(BannerType),
 			description: 'List of All Banners',
 			resolve: () => Banners,
 		},
-		vidBanner: {
+		vidBanners: {
 			type: new GraphQLList(VidBannerType),
 			description: 'List of All Video Banners',
 			resolve: () => VidBanners,
 		},
+		stores: {
+			type: new GraphQLList(StoreType),
+			description: 'List of All Stores',
+			resolve: () => Stores,
+		},
 		faqs: {
-			type: new GraphQLList(FAQsType),
+			type: new GraphQLList(FAQType),
 			description: 'List of All FAQs',
 			resolve: () => FAQs,
 		},
