@@ -1,6 +1,36 @@
+@font-face {
+	font-family: 'Agrandir';
+	src: url('../assets/fonts/Agrandir-GrandMedium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'AgrandirLight';
+	src: url('../assets/fonts/Agrandir-GrandThin.otf') format('opentype');
+}
+@font-face {
+	font-family: 'AgrandirRegular';
+	src: url('../assets/fonts/Agrandir-GrandRegular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../assets/fonts/HelveticaNeue.woff');
+}
+@font-face {
+	font-family: 'HelveticaBold';
+	src: url('../assets/fonts/HelveticaNeueBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'HelveticaLight';
+	src: url('../assets/fonts/HelveticaLight.woff2');
+}
+
+$appColor: #1c1c1c;
+$appContainerWidth: 1440px;
+
 *,
 :after,
 :before {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 

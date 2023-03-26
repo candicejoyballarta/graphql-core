@@ -1,20 +1,7 @@
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import Banner from './Banner';
-
-const GET_BANNERS = gql`
-	query getBanners {
-		banners {
-			id
-			txtHeader
-			txtDescription
-			imgBackground
-			buttons {
-				btnText
-			}
-		}
-	}
-`;
+import { GET_BANNERS } from '../queries/rootQueries';
 
 const Banners = () => {
 	const { loading, error, data } = useQuery(GET_BANNERS);

@@ -1,0 +1,66 @@
+// @use './App.scss';
+
+$appContainerWidth: 1440px;
+
+.container {
+	max-width: calc($appContainerWidth + 40px);
+	padding: 40px 20px 60px;
+
+	.title {
+		margin-bottom: 16px;
+		max-width: 100%;
+		padding-left: 8px;
+		text-align: left;
+	}
+}
+
+h4 {
+	font-size: 28px;
+	font-family: AgrandirLight;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	min-height: 100hv;
+	max-width: 1200px;
+	position: relative;
+
+	.carousel {
+		font-size: 0px;
+		cursor: pointer;
+		overflow: hidden;
+		white-space: nowrap;
+		transform: translateZ(0);
+
+		img {
+			height: 400px;
+			object-fit: cover;
+			margin-right: 14px;
+			width: calc(100% / 3);
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+}
+
+.carousel-arrow {
+	align-items: center;
+	background-color: #1c1c1c;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	width: 44px;
+	height: 44px;
+	justify-content: center;
+	top: 50%;
+	// transform: translateY(-50%);
+	z-index: 1;
+
+	.arrow-left {
+		position: absolute;
+		left: -20px;
+	}
+}

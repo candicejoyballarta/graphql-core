@@ -21,6 +21,7 @@ type Props = {
 
 const Banner = (props: Props) => {
 	const [storeName, setStoreName] = useState('');
+
 	if (props.id == 1) {
 		return (
 			<div className='main-placement-1'>

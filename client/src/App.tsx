@@ -1,6 +1,7 @@
 import './styles/App.scss';
 import Banners from './components/Banners';
 import FAQ from './components/FAQ';
+import Carousel from './components/Carousel';
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
@@ -13,8 +14,9 @@ function App() {
 	return (
 		<ApolloProvider client={client}>
 			<div className='one-column-layout'>
-				<Banners />
-				<FAQ />
+				<Carousel />
+				{/* <Banners />
+				<FAQ /> */}
 			</div>
 		</ApolloProvider>
 	);
