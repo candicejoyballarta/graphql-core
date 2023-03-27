@@ -15,6 +15,10 @@ function App() {
 	return (
 		<ApolloProvider client={client}>
 			<div className='one-column-layout'>
+				<div className='one-column-layout-row'>
+					<div id='mobile'></div>
+					<div id='desktop'></div>
+				</div>
 				<Banners />
 				<Carousel />
 				<VidBanner />

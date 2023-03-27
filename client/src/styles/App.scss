@@ -1,30 +1,34 @@
+@use './variables' as v;
+
 @font-face {
 	font-family: 'Agrandir';
 	src: url('../assets/fonts/Agrandir-GrandMedium.otf') format('opentype');
 }
+
 @font-face {
 	font-family: 'AgrandirLight';
 	src: url('../assets/fonts/Agrandir-GrandThin.otf') format('opentype');
 }
+
 @font-face {
 	font-family: 'AgrandirRegular';
 	src: url('../assets/fonts/Agrandir-GrandRegular.otf') format('opentype');
 }
+
 @font-face {
 	font-family: 'Helvetica';
 	src: url('../assets/fonts/HelveticaNeue.woff');
 }
+
 @font-face {
 	font-family: 'HelveticaBold';
 	src: url('../assets/fonts/HelveticaNeueBold.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'HelveticaLight';
 	src: url('../assets/fonts/HelveticaLight.woff2');
 }
-
-$appColor: #1c1c1c;
-$appContainerWidth: 1440px;
 
 *,
 :after,
@@ -36,7 +40,7 @@ $appContainerWidth: 1440px;
 
 html {
 	font-family: Helvetica !important;
-	background-color: #f3f4f4;
+	background-color: v.$bgColorPrimary;
 }
 
 body {
@@ -52,7 +56,59 @@ body {
 	grid-template-columns: 100%;
 	grid-template-rows: max-content;
 	margin: 0 auto;
-	background-color: #f3f4f4;
+	background-color: v.$bgColorPrimary;
+}
+
+#mobile {
+	display: none;
+	height: 90px;
+}
+
+@media (max-height: 820px) {
+	#mobile {
+		display: block;
+	}
+}
+
+#desktop {
+	height: 76px;
+	display: none;
+}
+
+@media (min-height: 821px) {
+	#desktop {
+		display: block;
+	}
+}
+
+.one-column-layout-row {
+	z-index: 1;
+	background-color: v.$bgColorPrimary;
+}
+
+@media (max-width: 600px) {
+	.one-column-layout-row {
+		height: 100%;
+	}
+}
+
+.img-wrapper {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	inset: 0px;
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+img {
+	position: absolute;
+	box-sizing: border-box;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	object-fit: cover;
 }
 
 .square-button {
@@ -70,11 +126,11 @@ body {
 	transition: all 0.5s ease-in-out;
 
 	&:hover {
-		background-color: #333;
+		background-color: v.$colorGrey;
 	}
 
 	&:disabled {
-		background-color: #c1c1c1;
+		background-color: v.$colorMediumGrey;
 
 		&:hover {
 			background-color: #c8c7c7;
@@ -95,7 +151,7 @@ body {
 
 .square-button-secondary {
 	background-color: transparent;
-	border: 1px solid #1c1c1c;
+	border: 1px solid v.$colorDarkGrey;
 
 	&:hover {
 		background-color: transparent;
@@ -103,6 +159,6 @@ body {
 }
 
 .square-button-invert-secondary {
-	border-color: #fff;
-	color: #fff;
+	border-color: v.$colorWhite;
+	color: v.$colorWhite;
 }
