@@ -18,8 +18,9 @@ const GET_STORES = gql`
 	query getStores {
 		stores {
 			id
-			imgBackground
+			txtHeader
 			txtLink
+			imgBackground
 		}
 	}
 `;

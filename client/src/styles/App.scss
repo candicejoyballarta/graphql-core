@@ -52,4 +52,57 @@ body {
 	grid-template-columns: 100%;
 	grid-template-rows: max-content;
 	margin: 0 auto;
+	background-color: #f3f4f4;
+}
+
+.square-button {
+	height: 44px;
+	text-transform: uppercase;
+	min-width: 81px;
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+	outline: none;
+	padding: 0 20px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+
+	&:hover {
+		background-color: #333;
+	}
+
+	&:disabled {
+		background-color: #c1c1c1;
+
+		&:hover {
+			background-color: #c8c7c7;
+		}
+	}
+}
+
+.square-button > svg {
+	margin-right: 0.5em;
+	stroke-width: 1px;
+	flex-shrink: 0;
+}
+
+.square-button-primary {
+	background-color: #1c1c1c;
+	color: #fff;
+}
+
+.square-button-secondary {
+	background-color: transparent;
+	border: 1px solid #1c1c1c;
+
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.square-button-invert-secondary {
+	border-color: #fff;
+	color: #fff;
 }

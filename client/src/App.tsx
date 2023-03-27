@@ -4,6 +4,7 @@ import FAQ from './components/FAQ';
 import Carousel from './components/Carousel';
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import VidBanner from './components/VidBanner';
 
 const client = new ApolloClient({
 	uri: 'http://localhost:4000/graphql',
@@ -14,9 +15,10 @@ function App() {
 	return (
 		<ApolloProvider client={client}>
 			<div className='one-column-layout'>
+				<Banners />
 				<Carousel />
-				{/* <Banners />
-				<FAQ /> */}
+				<VidBanner />
+				<FAQ />
 			</div>
 		</ApolloProvider>
 	);

@@ -1,10 +1,21 @@
-// @use './App.scss';
+@use './App.scss';
 
 $appContainerWidth: 1440px;
 
-.container {
+.main-placement-4 {
+	grid-row: 5/5;
+}
+
+.carousel-container {
+	margin: 0 auto;
 	max-width: calc($appContainerWidth + 40px);
 	padding: 40px 20px 60px;
+	white-space: nowrap;
+
+	h4 {
+		font-size: 28px;
+		font-family: AgrandirLight;
+	}
 
 	.title {
 		margin-bottom: 16px;
@@ -12,38 +23,35 @@ $appContainerWidth: 1440px;
 		padding-left: 8px;
 		text-align: left;
 	}
-}
 
-h4 {
-	font-size: 28px;
-	font-family: AgrandirLight;
+	.store-carousel {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .wrapper {
-	display: flex;
-	justify-content: center;
-	min-height: 100hv;
-	max-width: 1200px;
 	position: relative;
+	box-sizing: border-box;
+	user-select: none;
+	user-select: none;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
 
-	.carousel {
-		font-size: 0px;
-		cursor: pointer;
-		overflow: hidden;
-		white-space: nowrap;
-		transform: translateZ(0);
+.carousel {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
 
-		img {
-			height: 400px;
-			object-fit: cover;
-			margin-right: 14px;
-			width: calc(100% / 3);
-
-			&:last-child {
-				margin-right: 0px;
-			}
-		}
-	}
+.carousel-track {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .carousel-arrow {
@@ -52,15 +60,32 @@ h4 {
 	color: #fff;
 	cursor: pointer;
 	display: flex;
-	width: 44px;
 	height: 44px;
 	justify-content: center;
 	top: 50%;
-	// transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 44px;
 	z-index: 1;
+}
 
-	.arrow-left {
-		position: absolute;
-		left: -20px;
-	}
+.arrow-left {
+	position: absolute;
+	left: -20px;
+}
+
+.arrow-right {
+	position: absolute;
+	right: -20px;
+}
+
+.slide {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+
+.slide,
+.slide-init {
+	display: block;
 }

@@ -1,0 +1,87 @@
+.store-main {
+	align-items: flex-end;
+	color: #fff;
+	display: flex;
+	padding: 36px 62px;
+	position: relative;
+
+	.content {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: flex-end;
+		position: relative;
+		width: 100%;
+		z-index: 3;
+
+		h4 {
+			font-size: 22px !important;
+		}
+
+		.link {
+			font-size: 14px !important;
+		}
+	}
+
+	.slides {
+		height: 300px;
+		margin: 0 8px;
+		width: 400px;
+	}
+
+	.store-bg {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		.img-wrapper {
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	img {
+		position: absolute;
+		inset: 0px;
+		box-sizing: border-box;
+		padding: 0px;
+		border: 0;
+		margin: auto;
+		display: block;
+		width: 0;
+		height: 0;
+		min-width: 100%;
+		min-height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		object-position: right center;
+	}
+}
+
+.store-banner {
+	height: 300px;
+	margin: 0 8px;
+	width: 400px;
+}
+
+.gradient {
+	display: flex;
+	bottom: 0;
+	flex-direction: column-reverse;
+	height: 70%;
+	left: 0;
+	position: absolute;
+	top: unset;
+	width: 100%;
+	z-index: 2;
+
+	.gradient-stripe {
+		flex: 1 1;
+		transition: all 0.25 ease-in-out;
+	}
+}

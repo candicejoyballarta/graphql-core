@@ -42,7 +42,12 @@ const Banner = (props: Props) => {
 						<div className='buttons'>
 							{props.buttons?.map((btn, index) => {
 								return (
-									<button key={index}>{btn.btnText}</button>
+									<button
+										className='square-button square-button-primary'
+										key={index}
+									>
+										{btn.btnText}
+									</button>
 								);
 							})}
 						</div>
@@ -71,7 +76,11 @@ const Banner = (props: Props) => {
 							/>
 							{props.buttons?.map((btn, index) => {
 								return (
-									<button key={index} disabled={!storeName}>
+									<button
+										key={index}
+										className='square-button square-button-primary'
+										disabled={!storeName}
+									>
 										{btn.btnText}
 									</button>
 								);
@@ -98,7 +107,12 @@ const Banner = (props: Props) => {
 						<div className='form-group'>
 							{props.buttons?.map((btn, index) => {
 								return (
-									<button key={index}>{btn.btnText}</button>
+									<button
+										key={index}
+										className='square-button square-button-primary'
+									>
+										{btn.btnText}
+									</button>
 								);
 							})}
 						</div>

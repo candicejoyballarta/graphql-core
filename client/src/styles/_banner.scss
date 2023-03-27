@@ -1,6 +1,11 @@
+// @use './App.scss';
+
+$appColor: #1c1c1c;
+$appContainerWidth: 1440px;
+
 .main-placement-1 {
 	grid-row: 2/2;
-	margin-bottom: 32px;
+	margin-bottom: 75px;
 
 	.container {
 		height: 548px;
@@ -10,7 +15,6 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
-		padding-bottom: 50px;
 
 		.background-img {
 			position: absolute;
@@ -77,35 +81,6 @@
 				gap: 10px;
 			}
 		}
-	}
-}
-
-button {
-	height: 44px;
-	background-color: $appColor;
-	color: white;
-	font-family: 'Helvetica';
-	font-size: 14px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 81px;
-	padding: 0 20px;
-	outline: none;
-	border: none;
-	transition: all 0.5s ease-in-out;
-	cursor: pointer;
-
-	&:disabled {
-		background-color: #c1c1c1;
-
-		&:hover {
-			background-color: #c8c7c7;
-		}
-	}
-
-	&:hover {
-		background-color: #333;
 	}
 }
 
