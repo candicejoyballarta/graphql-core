@@ -14,12 +14,6 @@ p {
 		margin: 0 auto 20px;
 		padding: 40px;
 
-		.content {
-			width: 100%;
-			max-width: 1000px;
-			margin: 0 auto;
-		}
-
 		.title {
 			color: #2d3142;
 			font-size: 28px;
@@ -27,6 +21,16 @@ p {
 			font-weight: 400;
 			margin-top: 0;
 			margin-bottom: 28px;
+		}
+	}
+
+	.content {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+
+		& > div {
+			margin-bottom: 39px;
 		}
 	}
 }
@@ -54,7 +58,7 @@ p {
 
 		p {
 			padding-right: 1rem;
-			color: #000;
+			color: #1c1c1c;
 		}
 	}
 

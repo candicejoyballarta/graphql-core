@@ -1,10 +1,11 @@
-import './styles/App.scss';
-import Banners from './components/Banners';
-import FAQ from './components/FAQ';
-import Carousel from './components/Carousel';
-
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import Banners from './components/Banners';
+import FAQs from './components/FAQs';
+import Carousel from './components/Carousel';
 import VidBanner from './components/VidBanner';
+import './styles/App.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const client = new ApolloClient({
 	uri: 'http://localhost:4000/graphql',
@@ -22,7 +23,7 @@ function App() {
 				<Banners />
 				<Carousel />
 				<VidBanner />
-				<FAQ />
+				<FAQs />
 			</div>
 		</ApolloProvider>
 	);

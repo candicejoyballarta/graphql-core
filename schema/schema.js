@@ -52,7 +52,10 @@ const VidBannerType = new GraphQLObjectType({
 			type: GraphQLString,
 		},
 		buttons: {
-			type: new GraphQLList(ButtonType),
+			type: ButtonType,
+		},
+		style: {
+			type: GraphQLString,
 		},
 	}),
 });
@@ -81,6 +84,7 @@ const ButtonType = new GraphQLObjectType({
 	fields: () => ({
 		id: { type: GraphQLID },
 		btnText: { type: GraphQLString },
+		btnIcon: { type: GraphQLString },
 	}),
 });
 
@@ -90,7 +94,7 @@ const FAQType = new GraphQLObjectType({
 	fields: () => ({
 		id: { type: GraphQLID },
 		txtQuestion: { type: GraphQLString },
-		txtAnswer: { type: GraphQLString },
+		txtAnswer: { type: new GraphQLList(GraphQLString) },
 	}),
 });
 

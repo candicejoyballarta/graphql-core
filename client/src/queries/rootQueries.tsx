@@ -26,4 +26,30 @@ const GET_STORES = gql`
 	}
 `;
 
-export { GET_BANNERS, GET_STORES };
+const GET_VIDBANNERS = gql`
+	query getVidBanners {
+		vidBanners {
+			id
+			txtHeader
+			vidBackground
+			buttons {
+				id
+				btnText
+				btnIcon
+			}
+			style
+		}
+	}
+`;
+
+const GET_FAQS = gql`
+	query getFAQs {
+		faqs {
+			id
+			txtQuestion
+			txtAnswer
+		}
+	}
+`;
+
+export { GET_BANNERS, GET_STORES, GET_VIDBANNERS, GET_FAQS };

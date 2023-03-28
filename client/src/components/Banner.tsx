@@ -68,7 +68,6 @@ const Banner = (props: Props) => {
 	}
 
 	if (props.id == 4) {
-		console.log(props.imgHeader);
 		return (
 			<CertifiedBanner
 				id={props.id}
