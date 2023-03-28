@@ -17,9 +17,15 @@ type Props = {
 
 const BuyTranslationsBanner = (props: Props) => {
 	const [storeName, setStoreName] = useState('');
+	const [width, setWidth] = useState(window.innerWidth);
+
+	window.addEventListener('resize', function (event) {
+		setWidth(window.innerWidth);
+	});
+
 	return (
 		<div className='buy-container'>
-			<div className='content' style={props.style}>
+			<div className='content' style={width <= 600 ? {} : props.style}>
 				<div className='title'>{props.txtHeader}</div>
 				<div className='subtitle'>{props.txtDescription}</div>
 				<div className='form-group'>

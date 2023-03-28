@@ -4,6 +4,7 @@ const GET_BANNERS = gql`
 	query getBanners {
 		banners {
 			id
+			imgHeader
 			txtHeader
 			txtDescription
 			imgBackground

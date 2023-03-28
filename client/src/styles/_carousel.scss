@@ -89,3 +89,15 @@ $appContainerWidth: 1440px;
 .slide-init {
 	display: block;
 }
+
+@media (max-width: 600px) {
+	.carousel-container {
+		padding-right: 0;
+
+		.title {
+			h4 {
+				font-size: 26px;
+			}
+		}
+	}
+}

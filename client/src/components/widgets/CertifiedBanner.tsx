@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/certified.webp';
 import '../../styles/_certifiedBanner.scss';
 
 type Props = {
@@ -22,11 +23,16 @@ const CertifiedBanner = (props: Props) => {
 				</div>
 
 				<div className='text-content'>
-					<div className='logo'>
+					<div
+						className='logo'
+						style={{
+							transition: 'all 0.8s ease 0s',
+							opacity: 1,
+							transform: 'translateY(0px)',
+						}}
+					>
 						<div className='logo-rel'>
-							<div className='img'>
-								<img src={props.imgHeader} alt='logo' />
-							</div>
+							<img src={logo} alt='logo' />
 						</div>
 					</div>
 					<div className='subtitle'>{props.txtHeader}</div>

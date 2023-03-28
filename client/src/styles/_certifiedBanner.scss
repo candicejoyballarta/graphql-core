@@ -33,12 +33,20 @@
 
 			img {
 				position: absolute;
+				inset: 0px;
 				box-sizing: border-box;
+				padding: 0px;
+				border: none;
+				margin: auto;
+				display: block;
+				width: 0px;
+				height: 0px;
 				min-width: 100%;
 				max-width: 100%;
 				min-height: 100%;
 				max-height: 100%;
 				object-fit: cover;
+				object-position: right center;
 			}
 		}
 
@@ -54,9 +62,6 @@
 			justify-content: center;
 
 			.logo {
-				transition: all 0.8s ease 0s;
-				opacity: 1;
-				transform: translateY(0px);
 				margin-bottom: 20px;
 
 				.logo-rel {
@@ -88,6 +93,39 @@
 				max-width: 504px;
 				line-height: 20px;
 				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 820px) {
+	.main-placement-5 {
+		.content {
+			min-height: 632px;
+
+			.background {
+				.rel-image {
+					min-height: 632px;
+				}
+			}
+
+			.text-content {
+				justify-content: flex-end;
+				padding-bottom: 35px;
+
+				.logo {
+					margin-bottom: 10px;
+
+					.logo-rel {
+						img {
+							height: 99px;
+						}
+					}
+				}
+
+				.subtitle {
+					font-size: 26px;
+				}
 			}
 		}
 	}

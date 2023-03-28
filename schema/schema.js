@@ -17,6 +17,9 @@ const BannerType = new GraphQLObjectType({
 		id: {
 			type: GraphQLNonNull(GraphQLID),
 		},
+		imgHeader: {
+			type: GraphQLString,
+		},
 		txtHeader: {
 			type: GraphQLString,
 		},

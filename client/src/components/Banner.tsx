@@ -3,8 +3,7 @@ import img1 from '../assets/img1.webp';
 import img2 from '../assets/img2.webp';
 import img3 from '../assets/img3.webp';
 import img4 from '../assets/img4.webp';
-import logo from '../assets/certified.webp';
-import '../styles/_banner.scss';
+
 import NewWtbBanner from './widgets/NewWtbBanner';
 import BuyTranslationsBanner from './widgets/BuyTranslationsBanner';
 import CertifiedBanner from './widgets/CertifiedBanner';
@@ -16,6 +15,7 @@ type Buttons = {
 
 type Props = {
 	id: number;
+	imgHeader: string;
 	txtHeader: string;
 	txtDescription: string;
 	imgBackground: string;
@@ -46,6 +46,7 @@ const Banner = (props: Props) => {
 					txtDescription={props.txtDescription}
 					imgBackground={props.imgBackground}
 					buttons={props.buttons}
+					style={{}}
 				/>
 			</div>
 		);
@@ -75,7 +76,6 @@ const Banner = (props: Props) => {
 				txtHeader={props.txtHeader}
 				txtDescription={props.txtDescription}
 				imgBackground={props.imgBackground}
-				buttons={props.buttons}
 			/>
 		);
 	}

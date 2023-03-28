@@ -1,5 +1,5 @@
 import React from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import Banner from './Banner';
 import { GET_BANNERS } from '../queries/rootQueries';
 
@@ -21,6 +21,7 @@ const Banners = () => {
 				data.banners.map(
 					(banner: {
 						id: number;
+						imgHeader: string;
 						txtHeader: string;
 						txtDescription: string;
 						imgBackground: string;
@@ -29,6 +30,7 @@ const Banners = () => {
 						<Banner
 							key={banner.id}
 							id={banner.id}
+							imgHeader={banner.imgHeader}
 							txtHeader={banner.txtHeader}
 							txtDescription={banner.txtDescription}
 							imgBackground={banner.imgBackground}

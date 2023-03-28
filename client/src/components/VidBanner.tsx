@@ -7,7 +7,7 @@ type Props = {};
 
 const VidBanner = (props: Props) => {
 	return (
-		<div className='main-placement-6'>
+		<div className='one-column-layout-row main-placement-6'>
 			<div className='two-col'>
 				<div className='banner banner-light'>
 					<div className='banner-container left-middle'>
@@ -21,11 +21,11 @@ const VidBanner = (props: Props) => {
 							<source src={vid1} type='video/mp4' />
 							"Your browser does not support the video tag"
 						</video>
-						<h4 className='banner-subtitle subtitle-light'>
+						<h4 className='banner-subtitle'>
 							CHECK YOUR LIGHT <br />
 							SENSITIVITY
 						</h4>
-						<div className='banner-button btn-light'>
+						<div className='banner-button'>
 							<button className='square-button square-button-secondary square-button-invert-secondary'>
 								GET STARTED
 							</button>
@@ -49,7 +49,7 @@ const VidBanner = (props: Props) => {
 							FRAME WITH THE <br />
 							PERFECT LENS.
 						</h4>
-						<div className='banner-button btn-dark'>
+						<div className='banner-button'>
 							<button className='square-button square-button-primary'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'

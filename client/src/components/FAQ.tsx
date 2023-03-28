@@ -5,7 +5,7 @@ type Props = {};
 
 const FAQ = (props: Props) => {
 	return (
-		<div className='main-placement-7'>
+		<div className='one-column-layout-row main-placement-7'>
 			<div className='container'>
 				<div className='content'>
 					<h2 className='title'>Frequently Asked Questions</h2>

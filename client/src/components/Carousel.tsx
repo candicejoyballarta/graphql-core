@@ -20,7 +20,7 @@ const Carousel = (props: Props) => {
 	return (
 		<>
 			{!loading && !error && (
-				<div className='main-placement-4'>
+				<div className='one-column-layout-row main-placement-4'>
 					<div className='carousel-container'>
 						<div className='title'>
 							<h4>EXPLORE STORES NEAR YOU</h4>
