@@ -1,5 +1,3 @@
-import React from 'react';
-import vid2 from '../assets/vid6.mp4';
 import '../styles/_vidBanner.scss';
 import { useQuery } from '@apollo/client';
 import VidBannerLight from './widgets/VidBannerLight';

@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { GET_FAQS } from '../queries/rootQueries';
 import FAQ from './FAQ';
 
-const FAQs = (props: Props) => {
+const FAQs = () => {
 	const { loading, error, data } = useQuery(GET_FAQS);
 
 	if (loading) {
@@ -22,13 +22,21 @@ const FAQs = (props: Props) => {
 							<h2 className='title'>
 								Frequently Asked Questions
 							</h2>
-							{data.faqs.map((faq, index) => (
-								<FAQ
-									key={index}
-									txtQuestion={faq.txtQuestion}
-									txtAnswer={faq.txtAnswer}
-								/>
-							))}
+							{data.faqs.map(
+								(
+									faq: {
+										txtQuestion: string;
+										txtAnswer: string[];
+									},
+									index: number
+								) => (
+									<FAQ
+										key={index}
+										txtQuestion={faq.txtQuestion}
+										txtAnswer={faq.txtAnswer}
+									/>
+								)
+							)}
 						</div>
 					</div>
 				</div>

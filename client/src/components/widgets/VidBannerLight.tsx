@@ -1,6 +1,3 @@
-import React from 'react';
-// import vid1 from '../../assets/vid5.mp4';
-
 type Button = {
 	id: number;
 	btnText: string;

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import '../styles/_store.scss';
 
 type Props = {
@@ -9,8 +8,6 @@ type Props = {
 
 const ImgCarousel = (props: Props) => {
 	const opacities = [1, 0.9, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1];
-
-	// useEffect(() => {
 	// 	document.querySelectorAll<HTMLElement>('.slick-track').forEach((el) => {
 	// 		el.style.setProperty('width', '12960px', 'important');
 	// 	});
