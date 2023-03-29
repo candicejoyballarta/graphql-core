@@ -1,4 +1,4 @@
-import '../styles/_store.scss';
+import '../../styles/_store.scss';
 
 type Props = {
 	storeName: string;

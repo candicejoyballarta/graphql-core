@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_FAQS } from '../queries/rootQueries';
-import FAQ from './FAQ';
+import FAQ from './widgets/FAQ';
 
 const FAQs = () => {
 	const { loading, error, data } = useQuery(GET_FAQS);

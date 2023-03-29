@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/_faq.scss';
-import makeItalic from '../utils/makeItalic';
+import '../../styles/_faq.scss';
+import makeItalic from '../../utils/makeItalic';
 
 type Props = {
 	txtQuestion: string;

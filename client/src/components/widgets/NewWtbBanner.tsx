@@ -1,20 +1,14 @@
 import React from 'react';
 import '../../styles/_newWtbBanner.scss';
+import { IBanner } from '../../model/IBanner';
 
-type Buttons = {
-	id: number;
-	btnText: string;
-};
-
-type Props = {
-	id: number;
-	txtHeader: string;
-	txtDescription: string;
-	imgBackground: string;
-	buttons: Buttons[];
-};
-
-const NewWtbBanner = (props: Props) => {
+const NewWtbBanner = ({
+	id,
+	txtHeader,
+	txtDescription,
+	imgBackground,
+	buttons,
+}: IBanner) => {
 	// Alternative implementation of makeItalics util
 	function makeItalic(text: string) {
 		let description = text.split(' ');
@@ -50,15 +44,15 @@ const NewWtbBanner = (props: Props) => {
 				<div className='background-img'>
 					<div className='rel-image'>
 						<div className='img-wrapper'>
-							<img src={props.imgBackground} alt='main header' />
+							<img src={imgBackground} alt='main header' />
 						</div>
 					</div>
 				</div>
 				<div className='banner-content'>
-					<h1>{props.txtHeader}</h1>
-					{makeItalic(props.txtDescription)}
+					<h1>{txtHeader}</h1>
+					{makeItalic(txtDescription)}
 					<div className='buttons'>
-						{props.buttons?.map((btn, index) => {
+						{buttons?.map((btn, index) => {
 							return (
 								<button
 									key={index}
