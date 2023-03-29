@@ -74,7 +74,8 @@ const Carousel = () => {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
+		initialSlide: 0,
+		slidesToShow: 3,
 		slidesToScroll: 3,
 		nextArrow: <NextArrow onClick={next} />,
 		prevArrow: <PrevArrow onClick={previous} />,
@@ -91,8 +92,17 @@ const Carousel = () => {
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+				},
+			},
+			{
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					infinite: true,
 					dots: true,
 				},

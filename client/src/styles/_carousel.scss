@@ -14,6 +14,18 @@ $appContainerWidth: 1440px;
 	}
 }
 
+.slick-active {
+	width: unset !important;
+}
+
+.slick-dots {
+	li {
+		width: 12px !important;
+		height: 12px !important;
+		margin: 0 !important;
+	}
+}
+
 .carousel-container {
 	margin: 0 auto;
 	max-width: calc($appContainerWidth + 40px);
@@ -63,6 +75,16 @@ $appContainerWidth: 1440px;
 }
 
 @media (max-width: 600px) {
+	.slick-active {
+		width: unset !important;
+	}
+
+	.store-main.store-banner {
+		height: 202px;
+		margin-right: 16px;
+		width: 268px;
+	}
+
 	.carousel-container {
 		padding-right: 0;
 
@@ -73,9 +95,15 @@ $appContainerWidth: 1440px;
 		}
 	}
 
-	.store-main.store-banner {
-		height: 202px;
-		margin-right: 16px;
-		width: 268px;
+	.store-main {
+		.content {
+			h4 {
+				font-size: 18px !important;
+			}
+		}
+	}
+
+	.arrow-right {
+		right: 0;
 	}
 }
