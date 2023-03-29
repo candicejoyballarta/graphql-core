@@ -84,7 +84,6 @@ const ButtonType = new GraphQLObjectType({
 	fields: () => ({
 		id: { type: GraphQLID },
 		btnText: { type: GraphQLString },
-		btnIcon: { type: GraphQLString },
 	}),
 });
 

@@ -127,7 +127,6 @@ const VidBanners = [
 		buttons: {
 			id: 2,
 			btnText: 'TRY ON NOW',
-			btnIcon: '',
 		},
 		style: 'dark',
 	},

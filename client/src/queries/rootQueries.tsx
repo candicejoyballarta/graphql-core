@@ -35,7 +35,6 @@ const GET_VIDBANNERS = gql`
 			buttons {
 				id
 				btnText
-				btnIcon
 			}
 			style
 		}
