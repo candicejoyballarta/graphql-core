@@ -35,7 +35,9 @@ const NewWtbBanner = (props: Props) => {
 					if (italize) {
 						return <i key={index}> {word}</i>;
 					} else {
-						return <React.Fragment> {word}</React.Fragment>;
+						return (
+							<React.Fragment key={index}> {word}</React.Fragment>
+						);
 					}
 				})}
 			</h2>
@@ -59,8 +61,8 @@ const NewWtbBanner = (props: Props) => {
 						{props.buttons?.map((btn, index) => {
 							return (
 								<button
-									className='square-button square-button-primary'
 									key={index}
+									className='square-button square-button-primary'
 								>
 									{btn.btnText}
 								</button>

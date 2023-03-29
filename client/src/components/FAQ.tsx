@@ -18,7 +18,7 @@ const FAQ = (props: Props) => {
 						className='header'
 						onClick={() => setIsActive(!isActive)}
 					>
-						<p>{makeItalic(txtQuestion, '')}</p>
+						{makeItalic(txtQuestion, '')}
 						<div className='icon'>
 							{isActive ? (
 								<div className='line line-one'></div>
@@ -36,7 +36,7 @@ const FAQ = (props: Props) => {
 							<div className='answers'>
 								{txtAnswer.map((ans, index) => (
 									<div key={index}>
-										<p>{makeItalic(ans, '')}</p>
+										{makeItalic(ans, '')}
 										<p className='blank'></p>
 									</div>
 								))}
