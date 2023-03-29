@@ -10,7 +10,7 @@ const NewWtbBanner = ({
 	buttons,
 }: IBanner) => {
 	// Alternative implementation of makeItalics util
-	function makeItalic(text: string) {
+	const makeItalic = (text: string) => {
 		let description = text.split(' ');
 		return (
 			<h2>
@@ -36,7 +36,7 @@ const NewWtbBanner = ({
 				})}
 			</h2>
 		);
-	}
+	};
 
 	return (
 		<div className='one-column-layout-row main-placement-1'>

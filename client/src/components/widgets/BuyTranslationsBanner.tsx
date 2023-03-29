@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/_buyTranslationsBanner.scss';
 import makeItalic from '../../utils/makeItalic';
 
@@ -20,9 +20,14 @@ const BuyTranslationsBanner = (props: Props) => {
 	const [storeName, setStoreName] = useState('');
 	const [width, setWidth] = useState(window.innerWidth);
 
-	window.addEventListener('resize', function (event) {
-		setWidth(window.innerWidth);
-	});
+	useEffect(() => {
+		let x = (event: Event) => setWidth(window.innerWidth);
+		window.addEventListener('resize', x);
+
+		return () => {
+			window.removeEventListener('resize', x);
+		};
+	}, []);
 
 	return (
 		<div className='buy-container'>
