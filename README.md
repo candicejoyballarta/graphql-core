@@ -5,7 +5,7 @@
 Open a terminal and run the following command
 
 ```
-git clone https://github.com/candicejoyballarta/graphql-core.
+git clone https://github.com/candicejoyballarta/graphql-core.git
 cd graphql-core
 ```
 
