@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/certified.webp';
 import '../../styles/_certifiedBanner.scss';
+import makeItalic from '../../utils/makeItalic';
 
 type Props = {
 	id: number;
@@ -36,7 +37,7 @@ const CertifiedBanner = (props: Props) => {
 						</div>
 					</div>
 					<div className='subtitle'>{props.txtHeader}</div>
-					<div className='long-text'>{props.txtDescription}</div>
+					{makeItalic(props.txtDescription, 'long-text')}
 				</div>
 			</div>
 		</div>

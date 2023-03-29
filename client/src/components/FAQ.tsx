@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/_faq.scss';
+import makeItalic from '../utils/makeItalic';
 
 type Props = {
 	txtQuestion: string;
@@ -17,7 +18,7 @@ const FAQ = (props: Props) => {
 						className='header'
 						onClick={() => setIsActive(!isActive)}
 					>
-						<p>{txtQuestion}</p>
+						<p>{makeItalic(txtQuestion, '')}</p>
 						<div className='icon'>
 							{isActive ? (
 								<div className='line line-one'></div>
@@ -35,7 +36,7 @@ const FAQ = (props: Props) => {
 							<div className='answers'>
 								{txtAnswer.map((ans, index) => (
 									<div key={index}>
-										<p>{ans}</p>
+										<p>{makeItalic(ans, '')}</p>
 										<p className='blank'></p>
 									</div>
 								))}

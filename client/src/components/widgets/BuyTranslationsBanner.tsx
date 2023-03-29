@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/_buyTranslationsBanner.scss';
+import makeItalic from '../../utils/makeItalic';
 
 type Buttons = {
 	id: number;
@@ -27,7 +28,7 @@ const BuyTranslationsBanner = (props: Props) => {
 		<div className='buy-container'>
 			<div className='content' style={width <= 600 ? {} : props.style}>
 				<div className='title'>{props.txtHeader}</div>
-				<div className='subtitle'>{props.txtDescription}</div>
+				{makeItalic(props.txtDescription, 'subtitle')}
 				<div className='form-group'>
 					{props.id == 2 ? (
 						<input
