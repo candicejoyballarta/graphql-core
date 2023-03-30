@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/_buyTranslationsBanner.scss';
+import styles from '../../styles/BTBanner.module.scss';
 import makeItalic from '../../utils/makeItalic';
 import { IBanner } from '../../model/IBanner';
 interface BTBanner extends IBanner {
@@ -27,15 +27,15 @@ const BuyTranslationsBanner = ({
 	}, []);
 
 	return (
-		<div className='buy-container'>
-			<div className='content' style={width <= 600 ? {} : style}>
-				<div className='title'>{txtHeader}</div>
-				{makeItalic(txtDescription, 'subtitle')}
-				<div className='form-group'>
+		<div className={styles.buyContainer}>
+			<div className={styles.content} style={width <= 600 ? {} : style}>
+				<div className={styles.title}>{txtHeader}</div>
+				{makeItalic(txtDescription, styles.subtitle)}
+				<div className={styles.formGroup}>
 					{id == 2 ? (
 						<input
 							type='text'
-							className='square-control'
+							className={styles.squareControl}
 							name='store'
 							value={storeName}
 							onChange={(e) => setStoreName(e.target.value)}
@@ -58,8 +58,8 @@ const BuyTranslationsBanner = ({
 					})}
 				</div>
 			</div>
-			<div className='buy-image'>
-				<div className='img-wrapper'>
+			<div className={styles.buyImage}>
+				<div className={styles.imgWrapper}>
 					<img src={imgBackground} alt='buy img2' />
 				</div>
 			</div>

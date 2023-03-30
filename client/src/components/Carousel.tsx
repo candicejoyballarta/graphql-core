@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useQuery } from '@apollo/client';
 import ImgCarousel from './widgets/ImgCarousel';
 import { GET_STORES } from '../queries/rootQueries';
 import '../styles/_carousel.scss';
+import styles from '../styles/Carousel.module.scss';
 import Slider from 'react-slick';
 
 interface IArrowProps {
@@ -10,6 +11,7 @@ interface IArrowProps {
 }
 
 const Carousel = () => {
+	const [currentIndex, setCurrentIndex] = useState<number>(0);
 	const { loading, error, data } = useQuery(GET_STORES);
 
 	const slider = useRef<Slider>(null);
@@ -25,8 +27,14 @@ const Carousel = () => {
 		<h1>Error</h1>;
 	}
 
+	console.log(currentIndex);
+
 	const PrevArrow = ({ onClick }: IArrowProps) => (
-		<div className='carousel-arrow arrow-left' onClick={onClick}>
+		<div
+			className={`${styles.carouselArrow} ${styles.arrowLeft}`}
+			style={currentIndex! == 0 ? { display: 'none' } : {}}
+			onClick={onClick}
+		>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='24'
@@ -46,7 +54,10 @@ const Carousel = () => {
 	);
 
 	const NextArrow = ({ onClick }: IArrowProps) => (
-		<div className='carousel-arrow arrow-right' onClick={onClick}>
+		<div
+			className={`${styles.carouselArrow} ${styles.arrowRight}`}
+			onClick={onClick}
+		>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='24'
@@ -66,7 +77,7 @@ const Carousel = () => {
 	);
 
 	const settings = {
-		className: 'store-carousel',
+		className: styles.storeCarousel,
 		dots: true,
 		infinite: true,
 		speed: 500,
@@ -104,15 +115,20 @@ const Carousel = () => {
 				},
 			},
 		],
+		afterChange: (current: number) => {
+			setCurrentIndex(current);
+		},
 	};
 
 	return (
 		<>
 			{!loading && !error && (
 				<div className='one-column-layout-row main-placement-4'>
-					<div className='carousel-container'>
-						<div className='title'>
-							<h4>EXPLORE STORES NEAR YOU</h4>
+					<div className={styles.carouselContainer}>
+						<div className={styles.title}>
+							<h4 className={styles.h4}>
+								EXPLORE STORES NEAR YOU
+							</h4>
 						</div>
 						<Slider {...settings} ref={slider}>
 							{data.stores.map(

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/certified.webp';
-import '../../styles/_certifiedBanner.scss';
+import styles from '../../styles/CertifiedBanner.module.scss';
 import makeItalic from '../../utils/makeItalic';
 import { IBanner } from '../../model/IBanner';
 
@@ -11,16 +11,16 @@ const CertifiedBanner = ({
 }: IBanner) => {
 	return (
 		<div className='one-column-layout-row main-placement-5'>
-			<div className='content'>
-				<div className='background'>
-					<div className='rel-image'>
-						<div className='img-wrapper'>
+			<div className={styles.content}>
+				<div className={styles.background}>
+					<div className={styles.relImage}>
+						<div className={styles.imgWrapper}>
 							<img src={imgBackground} alt='glasses' />
 						</div>
 					</div>
 				</div>
 
-				<div className='text-content'>
+				<div className={styles.textContent}>
 					<div
 						className='logo'
 						style={{
@@ -29,12 +29,12 @@ const CertifiedBanner = ({
 							transform: 'translateY(0px)',
 						}}
 					>
-						<div className='logo-rel'>
+						<div className={styles.logoRel}>
 							<img src={logo} alt='logo' />
 						</div>
 					</div>
-					<div className='subtitle'>{txtHeader}</div>
-					{makeItalic(txtDescription, 'long-text')}
+					<div className={styles.subtitle}>{txtHeader}</div>
+					{makeItalic(txtDescription, styles.longText)}
 				</div>
 			</div>
 		</div>
