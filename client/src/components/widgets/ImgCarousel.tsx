@@ -1,29 +1,19 @@
 import '../../styles/_store.scss';
 
-type Props = {
+interface IImgCarousel {
 	storeName: string;
 	imgBackground: string;
 	imgAlt: string;
-};
+}
 
-const ImgCarousel = (props: Props) => {
+const ImgCarousel = ({ storeName, imgBackground, imgAlt }: IImgCarousel) => {
 	const opacities = [1, 0.9, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1];
-	// 	document.querySelectorAll<HTMLElement>('.slick-track').forEach((el) => {
-	// 		el.style.setProperty('width', '12960px', 'important');
-	// 	});
-
-	// 	document
-	// 		.querySelectorAll<HTMLElement>('.slick-active')
-	// 		.forEach((el) => {
-	// 			el.style.setProperty('width', 'unset', 'important');
-	// 		});
-	// }, []);
 
 	return (
 		<div className='store-main store-banner'>
 			<div className='store-bg'>
 				<div className='img-wrapper'>
-					<img src={props.imgBackground} alt={props.imgAlt} />
+					<img src={imgBackground} alt={imgAlt} />
 				</div>
 			</div>
 			<div className='gradient'>
@@ -43,10 +33,10 @@ const ImgCarousel = (props: Props) => {
 					<h4>
 						STORES
 						<br />
-						{props.storeName}
+						{storeName}
 					</h4>
 				</div>
-				<div className='link'>
+				<div className='link' style={{ alignItems: 'center' }}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						width='14'

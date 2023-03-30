@@ -3,7 +3,6 @@ import '../../styles/_newWtbBanner.scss';
 import { IBanner } from '../../model/IBanner';
 
 const NewWtbBanner = ({
-	id,
 	txtHeader,
 	txtDescription,
 	imgBackground,

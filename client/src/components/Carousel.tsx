@@ -5,9 +5,9 @@ import { GET_STORES } from '../queries/rootQueries';
 import '../styles/_carousel.scss';
 import Slider from 'react-slick';
 
-type Props = {
+interface IArrowProps {
 	onClick: React.MouseEventHandler<HTMLDivElement>;
-};
+}
 
 const Carousel = () => {
 	const { loading, error, data } = useQuery(GET_STORES);
@@ -29,8 +29,8 @@ const Carousel = () => {
 		<h1>Error</h1>;
 	}
 
-	const PrevArrow = (props: Props) => (
-		<div className='carousel-arrow arrow-left' onClick={props.onClick}>
+	const PrevArrow = ({ onClick }: IArrowProps) => (
+		<div className='carousel-arrow arrow-left' onClick={onClick}>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='24'
@@ -49,8 +49,8 @@ const Carousel = () => {
 		</div>
 	);
 
-	const NextArrow = (props: Props) => (
-		<div className='carousel-arrow arrow-right' onClick={props.onClick}>
+	const NextArrow = ({ onClick }: IArrowProps) => (
+		<div className='carousel-arrow arrow-right' onClick={onClick}>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='24'
@@ -120,17 +120,14 @@ const Carousel = () => {
 						</div>
 						<Slider {...settings} ref={slider}>
 							{data.stores.map(
-								(
-									store: {
-										id: number;
-										txtHeader: string;
-										txtLink: string;
-										imgBackground: string;
-									},
-									index: number
-								) => (
+								(store: {
+									id: number;
+									txtHeader: string;
+									txtLink: string;
+									imgBackground: string;
+								}) => (
 									<ImgCarousel
-										key={index}
+										key={store.id}
 										storeName={store.txtHeader}
 										imgAlt={store.txtHeader}
 										imgBackground={store.imgBackground}

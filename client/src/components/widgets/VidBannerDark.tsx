@@ -1,29 +1,21 @@
-type Button = {
-	id: number;
-	btnText: string;
-};
+import { IVidBanner } from '../../model/IVidBanner';
 
-type Props = {
-	txtHeader: string;
-	vidBackground: string;
-	buttons: Button;
-};
-
-const VidBannerDark = (props: Props) => {
+const VidBannerDark = ({ txtHeader, vidBackground, buttons }: IVidBanner) => {
 	return (
 		<div className='banner banner-dark'>
 			<div className='banner-container left-middle'>
 				<video
 					autoPlay
 					loop
+					muted
 					className='bg-video'
 					preload='none'
 					playsInline
 				>
-					<source src={props.vidBackground} type='video/mp4' />
+					<source src={vidBackground} type='video/mp4' />
 					"Your browser does not support the video tag"
 				</video>
-				<h4 className='banner-subtitle'>{props.txtHeader}</h4>
+				<h4 className='banner-subtitle'>{txtHeader}</h4>
 				<div className='banner-button'>
 					<button className='square-button square-button-primary'>
 						<svg
@@ -47,7 +39,7 @@ const VidBannerDark = (props: Props) => {
 								ry='2'
 							></rect>
 						</svg>
-						{props.buttons.btnText}
+						{buttons.btnText}
 					</button>
 				</div>
 			</div>

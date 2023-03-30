@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/_buyTranslationsBanner.scss';
 import makeItalic from '../../utils/makeItalic';
-
-type Buttons = {
-	id: number;
-	btnText: string;
-};
-
-type Props = {
-	id: number;
-	txtHeader: string;
-	txtDescription: string;
-	imgBackground: string;
-	buttons: Buttons[];
+import { IBanner } from '../../model/IBanner';
+interface BTBanner extends IBanner {
 	style: React.CSSProperties;
-};
+}
 
-const BuyTranslationsBanner = (props: Props) => {
+const BuyTranslationsBanner = ({
+	id,
+	txtHeader,
+	txtDescription,
+	buttons,
+	imgBackground,
+	style,
+}: BTBanner) => {
 	const [storeName, setStoreName] = useState('');
 	const [width, setWidth] = useState(window.innerWidth);
 
@@ -31,11 +28,11 @@ const BuyTranslationsBanner = (props: Props) => {
 
 	return (
 		<div className='buy-container'>
-			<div className='content' style={width <= 600 ? {} : props.style}>
-				<div className='title'>{props.txtHeader}</div>
-				{makeItalic(props.txtDescription, 'subtitle')}
+			<div className='content' style={width <= 600 ? {} : style}>
+				<div className='title'>{txtHeader}</div>
+				{makeItalic(txtDescription, 'subtitle')}
 				<div className='form-group'>
-					{props.id == 2 ? (
+					{id == 2 ? (
 						<input
 							type='text'
 							className='square-control'
@@ -48,12 +45,12 @@ const BuyTranslationsBanner = (props: Props) => {
 					) : (
 						''
 					)}
-					{props.buttons?.map((btn, index) => {
+					{buttons?.map((btn, index) => {
 						return (
 							<button
 								key={index}
 								className='square-button square-button-primary'
-								disabled={props.id == 3 ? false : !storeName}
+								disabled={id == 3 ? false : !storeName}
 							>
 								{btn.btnText}
 							</button>
@@ -63,7 +60,7 @@ const BuyTranslationsBanner = (props: Props) => {
 			</div>
 			<div className='buy-image'>
 				<div className='img-wrapper'>
-					<img src={props.imgBackground} alt='buy img2' />
+					<img src={imgBackground} alt='buy img2' />
 				</div>
 			</div>
 		</div>

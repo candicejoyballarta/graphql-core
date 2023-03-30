@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import '../../styles/_faq.scss';
 import makeItalic from '../../utils/makeItalic';
 
-type Props = {
+interface IFAQ {
 	txtQuestion: string;
 	txtAnswer: string[];
-};
+}
 
-const FAQ = (props: Props) => {
-	const { txtQuestion, txtAnswer } = props;
+const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 	const [isActive, setIsActive] = useState(false);
 	return (
 		<div className='accordion'>

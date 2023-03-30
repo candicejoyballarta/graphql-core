@@ -16,7 +16,7 @@ const Banner = ({
 			<>
 				<NewWtbBanner
 					id={id}
-					imgHeader=''
+					imgHeader={''}
 					txtHeader={txtHeader}
 					txtDescription={txtDescription}
 					imgBackground={imgBackground}
@@ -31,6 +31,7 @@ const Banner = ({
 			<div className='one-column-layout-row main-placement-2'>
 				<BuyTranslationsBanner
 					id={id}
+					imgHeader={''}
 					txtHeader={txtHeader}
 					txtDescription={txtDescription}
 					imgBackground={imgBackground}
@@ -46,6 +47,7 @@ const Banner = ({
 			<div className='one-column-layout-row main-placement-3'>
 				<BuyTranslationsBanner
 					id={id}
+					imgHeader={''}
 					txtHeader={txtHeader}
 					txtDescription={txtDescription}
 					imgBackground={imgBackground}
@@ -64,6 +66,7 @@ const Banner = ({
 				txtHeader={txtHeader}
 				txtDescription={txtDescription}
 				imgBackground={imgBackground}
+				buttons={[]}
 			/>
 		);
 	}
