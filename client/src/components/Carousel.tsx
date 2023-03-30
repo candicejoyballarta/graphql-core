@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { useQuery } from '@apollo/client';
 import ImgCarousel from './widgets/ImgCarousel';
 import { GET_STORES } from '../queries/rootQueries';
-import '../styles/_carousel.scss';
 import styles from '../styles/Carousel.module.scss';
 import Slider from 'react-slick';
 
