@@ -14,7 +14,7 @@ const VidBanner = () => {
 	return (
 		<>
 			{!loading && !error && (
-				<div className='one-column-layout-row main-placement-6'>
+				<div className='one-column-layout__row one-column-layout__row--main_placement_6'>
 					<div className='two-col'>
 						{data.vidBanners.map(
 							(

@@ -38,7 +38,7 @@ const NewWtbBanner = ({
 	};
 
 	return (
-		<div className='one-column-layout-row main-placement-1'>
+		<div className='one-column-layout__row one-column-layout__row--main_placement_1'>
 			<div className={styles.container}>
 				<div className={styles.backgroundImg}>
 					<div className={styles.relImgage}>

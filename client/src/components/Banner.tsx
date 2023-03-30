@@ -28,7 +28,7 @@ const Banner = ({
 
 	if (id == 2) {
 		return (
-			<div className='one-column-layout-row main-placement-2'>
+			<div className='one-column-layout__row one-column-layout__row--main_placement_2'>
 				<BuyTranslationsBanner
 					id={id}
 					imgHeader={''}
@@ -44,7 +44,7 @@ const Banner = ({
 
 	if (id == 3) {
 		return (
-			<div className='one-column-layout-row main-placement-3'>
+			<div className='one-column-layout__row one-column-layout__row--main_placement_3'>
 				<BuyTranslationsBanner
 					id={id}
 					imgHeader={''}

@@ -122,7 +122,7 @@ const Carousel = () => {
 	return (
 		<>
 			{!loading && !error && (
-				<div className='one-column-layout-row main-placement-4'>
+				<div className='one-column-layout__row one-column-layout__row--main_placement_4'>
 					<div className={styles.carouselContainer}>
 						<div className={styles.title}>
 							<h4 className={styles.h4}>

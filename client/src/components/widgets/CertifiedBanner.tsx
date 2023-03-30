@@ -10,7 +10,7 @@ const CertifiedBanner = ({
 	imgBackground,
 }: IBanner) => {
 	return (
-		<div className='one-column-layout-row main-placement-5'>
+		<div className='one-column-layout__row one-column-layout__row--main_placement_5'>
 			<div className={styles.content}>
 				<div className={styles.background}>
 					<div className={styles.relImage}>

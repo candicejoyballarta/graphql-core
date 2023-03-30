@@ -13,7 +13,7 @@ const FAQs = () => {
 	return (
 		<>
 			{!loading && !error && (
-				<div className='one-column-layout-row main-placement-7'>
+				<div className='one-column-layout__row one-column-layout__row--main_placement_7'>
 					<div className={styles.container}>
 						<div className={styles.content}>
 							<h2 className={styles.title}>

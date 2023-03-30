@@ -59,31 +59,32 @@ body {
 	background-color: v.$bgColorPrimary;
 }
 
-#mobile {
-	display: none;
-	height: 90px;
-}
-
-@media (max-height: 820px) {
-	#mobile {
-		display: block;
-	}
-}
-
-#desktop {
-	height: 76px;
-	display: none;
-}
-
-@media (min-height: 821px) {
-	#desktop {
-		display: block;
-	}
-}
-
-.one-column-layout-row {
+.one-column-layout__row {
 	z-index: 1;
-	background-color: v.$bgColorPrimary;
+	// background-color: v.$bgColorPrimary;
+}
+
+.one-column-layout__row--main_placement_1 {
+	z-index: unset;
+	grid-row: 2/2;
+}
+.one-column-layout__row--main_placement_2 {
+	grid-row: 3/3;
+}
+.one-column-layout__row--main_placement_3 {
+	grid-row: 4/4;
+}
+.one-column-layout__row--main_placement_4 {
+	grid-row: 5/5;
+}
+.one-column-layout__row--main_placement_5 {
+	grid-row: 6/6;
+}
+.one-column-layout__row--main_placement_6 {
+	grid-row: 7/7;
+}
+.one-column-layout__row--main_placement_7 {
+	grid-row: 8/8;
 }
 
 @media (max-width: 600px) {
@@ -185,4 +186,26 @@ body {
 .square-button-invert-secondary {
 	border-color: v.$colorWhite;
 	color: v.$colorWhite;
+}
+
+#mobile {
+	display: none;
+	height: 90px;
+}
+
+@media (max-height: 820px) {
+	#mobile {
+		display: block;
+	}
+}
+
+#desktop {
+	height: 76px;
+	display: none;
+}
+
+@media (min-height: 821px) {
+	#desktop {
+		display: block;
+	}
 }
