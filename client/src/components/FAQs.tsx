@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_FAQS } from '../queries/rootQueries';
 import FAQ from './widgets/FAQ';
+import styles from '../styles/FAQ.module.scss';
 
 const FAQs = () => {
 	const { loading, error, data } = useQuery(GET_FAQS);
@@ -13,9 +14,9 @@ const FAQs = () => {
 		<>
 			{!loading && !error && (
 				<div className='one-column-layout-row main-placement-7'>
-					<div className='container'>
-						<div className='content'>
-							<h2 className='title'>
+					<div className={styles.container}>
+						<div className={styles.content}>
+							<h2 className={styles.title}>
 								Frequently Asked Questions
 							</h2>
 							{data.faqs.map(

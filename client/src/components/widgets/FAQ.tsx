@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../../styles/_faq.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import makeItalic from '../../utils/makeItalic';
+import styles from '../../styles/FAQ.module.scss';
 
 interface IFAQ {
 	txtQuestion: string;
@@ -11,23 +11,25 @@ interface IFAQ {
 const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 	const [isActive, setIsActive] = useState(false);
 	return (
-		<div className='accordion'>
-			<div className='full-width'>
-				<div className='content-wrapper'>
+		<div className={styles.accordion}>
+			<div className={styles.fullWidth}>
+				<div className={styles.contentWrapper}>
 					<motion.div
 						initial={false}
-						className='header'
+						className={styles.header}
 						onClick={() => setIsActive(!isActive)}
 					>
 						{makeItalic(txtQuestion, '')}
 						<AnimatePresence>
-							<div className='icon'>
+							<div className={styles.icon}>
 								{isActive ? (
 									<>
-										<div className='line line-one'></div>
+										<div
+											className={`${styles.line} ${styles.lineOne}`}
+										></div>
 										<motion.div
 											key='arrow'
-											className='line line-two'
+											className={`${styles.line} ${styles.lineTwo}`}
 											initial='open'
 											animate='collapsed'
 											variants={{
@@ -46,10 +48,12 @@ const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 									</>
 								) : (
 									<>
-										<div className='line line-one'></div>
+										<div
+											className={`${styles.line} ${styles.lineOne}`}
+										></div>
 										<motion.div
 											key='arrow'
-											className='line line-two'
+											className={`${styles.line} ${styles.lineTwo}`}
 											initial='collapsed'
 											animate='open'
 											variants={{
@@ -71,12 +75,12 @@ const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 						</AnimatePresence>
 					</motion.div>
 
-					<div className='collapse'>
+					<div className={styles.collapse}>
 						<AnimatePresence>
 							{isActive && (
 								<motion.div
 									key='answers'
-									className='answers'
+									className={styles.answers}
 									initial='collapsed'
 									animate='open'
 									exit='collapsed'
@@ -94,8 +98,8 @@ const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 								>
 									{txtAnswer.map((ans, index) => (
 										<div key={index}>
-											{makeItalic(ans, '')}
-											<p className='blank'></p>
+											{makeItalic(ans, styles.ans)}
+											<p className={styles.blank}></p>
 										</div>
 									))}
 								</motion.div>

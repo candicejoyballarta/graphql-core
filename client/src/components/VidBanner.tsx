@@ -1,4 +1,3 @@
-import '../styles/_vidBanner.scss';
 import { useQuery } from '@apollo/client';
 import VidBannerLight from './widgets/VidBannerLight';
 import VidBannerDark from './widgets/VidBannerDark';

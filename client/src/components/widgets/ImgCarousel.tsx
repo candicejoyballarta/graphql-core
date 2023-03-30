@@ -1,4 +1,4 @@
-import '../../styles/_store.scss';
+import styles from '../../styles/ImgCarousel.module.scss';
 
 interface IImgCarousel {
 	storeName: string;
@@ -10,17 +10,17 @@ const ImgCarousel = ({ storeName, imgBackground, imgAlt }: IImgCarousel) => {
 	const opacities = [1, 0.9, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1];
 
 	return (
-		<div className='store-main store-banner'>
-			<div className='store-bg'>
-				<div className='img-wrapper'>
+		<div className={`${styles.storeMain} ${styles.storeBanner}`}>
+			<div className={styles.storeBg}>
+				<div className={styles.imgWrapper}>
 					<img src={imgBackground} alt={imgAlt} />
 				</div>
 			</div>
-			<div className='gradient'>
+			<div className={styles.gradient}>
 				{opacities.map((opacity, index) => (
 					<div
 						key={index}
-						className='gradient-stripe'
+						className={styles.gradientStripe}
 						style={{
 							opacity: opacity,
 							backgroundColor: 'rgb(28, 28, 28)',
@@ -28,15 +28,15 @@ const ImgCarousel = ({ storeName, imgBackground, imgAlt }: IImgCarousel) => {
 					></div>
 				))}
 			</div>
-			<div className='content'>
-				<div className='subtitle'>
-					<h4>
+			<div className={styles.content}>
+				<div className={styles.subtitle}>
+					<h4 className={styles.h4}>
 						STORES
 						<br />
 						{storeName}
 					</h4>
 				</div>
-				<div className='link' style={{ alignItems: 'center' }}>
+				<div className={styles.link}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						width='14'

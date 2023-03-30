@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/_newWtbBanner.scss';
+import styles from '../../styles/NewWtbHeader.module.scss';
 import { IBanner } from '../../model/IBanner';
 
 const NewWtbBanner = ({
@@ -39,18 +39,18 @@ const NewWtbBanner = ({
 
 	return (
 		<div className='one-column-layout-row main-placement-1'>
-			<div className='container'>
-				<div className='background-img'>
-					<div className='rel-image'>
+			<div className={styles.container}>
+				<div className={styles.backgroundImg}>
+					<div className={styles.relImgage}>
 						<div className='img-wrapper'>
 							<img src={imgBackground} alt='main header' />
 						</div>
 					</div>
 				</div>
-				<div className='banner-content'>
+				<div className={styles.bannerContent}>
 					<h1>{txtHeader}</h1>
 					{makeItalic(txtDescription)}
-					<div className='buttons'>
+					<div className={styles.buttons}>
 						{buttons?.map((btn, index) => {
 							return (
 								<button

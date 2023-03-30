@@ -1,36 +1,9 @@
-@use './App.scss';
+@use 'variables' as v;
 
-$appContainerWidth: 1440px;
-
-.main-placement-4 {
-	grid-row: 5/5;
-}
-
-.slick-track {
-	display: flex !important;
-
-	div {
-		transition: opacity 0.5s ease-in-out 0.5s;
-	}
-}
-
-.slick-active {
-	width: unset !important;
-}
-
-.slick-dots {
-	li {
-		width: 12px !important;
-		height: 12px !important;
-		margin: 0 !important;
-	}
-}
-
-.carousel-container {
+.carouselContainer {
 	margin: 0 auto;
-	max-width: calc($appContainerWidth + 40px);
+	max-width: calc(v.$appContainerWidth + 40px);
 	padding: 40px 20px 60px;
-	white-space: nowrap;
 
 	h4 {
 		font-size: 28px;
@@ -44,13 +17,13 @@ $appContainerWidth: 1440px;
 		text-align: left;
 	}
 
-	.store-carousel {
+	.storeCarousel {
 		display: flex;
 		justify-content: center;
 	}
 }
 
-.carousel-arrow {
+.carouselArrow {
 	align-items: center;
 	background-color: #1c1c1c;
 	color: #fff;
@@ -64,46 +37,42 @@ $appContainerWidth: 1440px;
 	z-index: 1;
 }
 
-.arrow-left {
+.arrowLeft {
 	position: absolute;
 	left: -20px;
 }
 
-.arrow-right {
+.arrowRight {
 	position: absolute;
 	right: -20px;
 }
 
 @media (max-width: 600px) {
-	.slick-active {
-		width: unset !important;
-	}
-
-	.store-main.store-banner {
+	.storeMain.storeBanner {
 		height: 202px;
 		margin-right: 16px;
 		width: 268px;
 	}
 
-	.carousel-container {
+	.carouselContainer {
 		padding-right: 0;
 
 		.title {
-			h4 {
+			.h4 {
 				font-size: 26px;
 			}
 		}
 	}
 
-	.store-main {
+	.storeMain {
 		.content {
-			h4 {
+			.h4 {
 				font-size: 18px !important;
 			}
 		}
 	}
 
-	.arrow-right {
+	.arrowRight {
 		right: 0;
 	}
 }

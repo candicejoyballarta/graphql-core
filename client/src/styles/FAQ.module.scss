@@ -1,37 +1,29 @@
-$appContainerWidth: 1440px;
+@use 'variables' as v;
 
-p {
-	margin: 0;
+.container {
+	background-color: #fff;
+	width: 100%;
+	max-width: v.$appContainerWidth;
+	margin: 0 auto 20px;
+	padding: 40px;
+
+	.title {
+		color: #2d3142;
+		font-size: 28px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 28px;
+	}
 }
 
-.main-placement-7 {
-	grid-row: 8/8;
+.content {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
 
-	.container {
-		background-color: #fff;
-		width: 100%;
-		max-width: $appContainerWidth;
-		margin: 0 auto 20px;
-		padding: 40px;
-
-		.title {
-			color: #2d3142;
-			font-size: 28px;
-			font-family: Arial, Helvetica, sans-serif;
-			font-weight: 400;
-			margin-top: 0;
-			margin-bottom: 28px;
-		}
-	}
-
-	.content {
-		width: 100%;
-		max-width: 1000px;
-		margin: 0 auto;
-
-		& > div {
-			margin-bottom: 39px;
-		}
+	& > div {
+		margin-bottom: 39px;
 	}
 }
 
@@ -41,7 +33,7 @@ p {
 	cursor: pointer;
 	overflow: hidden;
 
-	.full-width {
+	.fullWidth {
 		max-width: 100%;
 	}
 
@@ -56,13 +48,13 @@ p {
 		right: 0;
 		color: #1c1c1c;
 
-		p {
+		.ans {
 			padding-right: 1rem;
 			color: #1c1c1c;
 		}
 	}
 
-	p {
+	.ans {
 		line-height: 1.2;
 		&:after {
 			content: '';
@@ -85,7 +77,7 @@ p {
 		height: 20px;
 	}
 
-	.content-wrapper {
+	.contentWrapper {
 		border-bottom: 1px solid #1c1c1c;
 		transition: all 0.4s ease-in-out;
 		margin-top: 5px;
@@ -114,14 +106,14 @@ p {
 		transition: transform 0.25s ease-in-out;
 	}
 
-	.line-one {
+	.lineOne {
 		width: 12px;
 		height: 1px;
 		top: 50%;
 		transform: translateY(-50%);
 	}
 
-	.line-two {
+	.lineTwo {
 		width: 1px;
 		height: 12px;
 		left: 50%;
