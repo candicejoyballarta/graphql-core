@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Check if the word 'Transitions' is present in text
-function makeItalic(text: string, className: string) {
+const makeItalic = (text: string, className: string) => {
 	// Split text into array of strings
 	let description = text.split(' ');
 	return (
@@ -18,6 +18,6 @@ function makeItalic(text: string, className: string) {
 			})}
 		</div>
 	);
-}
+};
 
 export default makeItalic;

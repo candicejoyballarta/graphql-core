@@ -1,22 +1,15 @@
 import React from 'react';
 import '../../styles/_newWtbBanner.scss';
+import { IBanner } from '../../model/IBanner';
 
-type Buttons = {
-	id: number;
-	btnText: string;
-};
-
-type Props = {
-	id: number;
-	txtHeader: string;
-	txtDescription: string;
-	imgBackground: string;
-	buttons: Buttons[];
-};
-
-const NewWtbBanner = (props: Props) => {
+const NewWtbBanner = ({
+	txtHeader,
+	txtDescription,
+	imgBackground,
+	buttons,
+}: IBanner) => {
 	// Alternative implementation of makeItalics util
-	function makeItalic(text: string) {
+	const makeItalic = (text: string) => {
 		let description = text.split(' ');
 		return (
 			<h2>
@@ -35,12 +28,14 @@ const NewWtbBanner = (props: Props) => {
 					if (italize) {
 						return <i key={index}> {word}</i>;
 					} else {
-						return <React.Fragment> {word}</React.Fragment>;
+						return (
+							<React.Fragment key={index}> {word}</React.Fragment>
+						);
 					}
 				})}
 			</h2>
 		);
-	}
+	};
 
 	return (
 		<div className='one-column-layout-row main-placement-1'>
@@ -48,19 +43,19 @@ const NewWtbBanner = (props: Props) => {
 				<div className='background-img'>
 					<div className='rel-image'>
 						<div className='img-wrapper'>
-							<img src={props.imgBackground} alt='main header' />
+							<img src={imgBackground} alt='main header' />
 						</div>
 					</div>
 				</div>
 				<div className='banner-content'>
-					<h1>{props.txtHeader}</h1>
-					{makeItalic(props.txtDescription)}
+					<h1>{txtHeader}</h1>
+					{makeItalic(txtDescription)}
 					<div className='buttons'>
-						{props.buttons?.map((btn, index) => {
+						{buttons?.map((btn, index) => {
 							return (
 								<button
-									className='square-button square-button-primary'
 									key={index}
+									className='square-button square-button-primary'
 								>
 									{btn.btnText}
 								</button>

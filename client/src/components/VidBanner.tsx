@@ -3,11 +3,7 @@ import { useQuery } from '@apollo/client';
 import VidBannerLight from './widgets/VidBannerLight';
 import VidBannerDark from './widgets/VidBannerDark';
 import { GET_VIDBANNERS } from '../queries/rootQueries';
-
-type Button = {
-	id: number;
-	btnText: string;
-};
+import { IButton } from '../model/IButton';
 
 const VidBanner = () => {
 	const { loading, error, data } = useQuery(GET_VIDBANNERS);
@@ -30,7 +26,7 @@ const VidBanner = () => {
 								banner: {
 									txtHeader: string;
 									vidBackground: string;
-									buttons: Button;
+									buttons: IButton;
 									style: string;
 								},
 								index: number

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import '../styles/_faq.scss';
-import makeItalic from '../utils/makeItalic';
+import '../../styles/_faq.scss';
+import makeItalic from '../../utils/makeItalic';
 
-type Props = {
+interface IFAQ {
 	txtQuestion: string;
 	txtAnswer: string[];
-};
+}
 
-const FAQ = (props: Props) => {
-	const { txtQuestion, txtAnswer } = props;
+const FAQ = ({ txtQuestion, txtAnswer }: IFAQ) => {
 	const [isActive, setIsActive] = useState(false);
 	return (
 		<div className='accordion'>
@@ -18,7 +17,7 @@ const FAQ = (props: Props) => {
 						className='header'
 						onClick={() => setIsActive(!isActive)}
 					>
-						<p>{makeItalic(txtQuestion, '')}</p>
+						{makeItalic(txtQuestion, '')}
 						<div className='icon'>
 							{isActive ? (
 								<div className='line line-one'></div>
@@ -36,7 +35,7 @@ const FAQ = (props: Props) => {
 							<div className='answers'>
 								{txtAnswer.map((ans, index) => (
 									<div key={index}>
-										<p>{makeItalic(ans, '')}</p>
+										{makeItalic(ans, '')}
 										<p className='blank'></p>
 									</div>
 								))}

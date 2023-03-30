@@ -2,23 +2,20 @@ import React from 'react';
 import logo from '../../assets/certified.webp';
 import '../../styles/_certifiedBanner.scss';
 import makeItalic from '../../utils/makeItalic';
+import { IBanner } from '../../model/IBanner';
 
-type Props = {
-	id: number;
-	imgHeader: string;
-	txtHeader: string;
-	txtDescription: string;
-	imgBackground: string;
-};
-
-const CertifiedBanner = (props: Props) => {
+const CertifiedBanner = ({
+	txtHeader,
+	txtDescription,
+	imgBackground,
+}: IBanner) => {
 	return (
 		<div className='one-column-layout-row main-placement-5'>
 			<div className='content'>
 				<div className='background'>
 					<div className='rel-image'>
 						<div className='img-wrapper'>
-							<img src={props.imgBackground} alt='glasses' />
+							<img src={imgBackground} alt='glasses' />
 						</div>
 					</div>
 				</div>
@@ -36,8 +33,8 @@ const CertifiedBanner = (props: Props) => {
 							<img src={logo} alt='logo' />
 						</div>
 					</div>
-					<div className='subtitle'>{props.txtHeader}</div>
-					{makeItalic(props.txtDescription, 'long-text')}
+					<div className='subtitle'>{txtHeader}</div>
+					{makeItalic(txtDescription, 'long-text')}
 				</div>
 			</div>
 		</div>

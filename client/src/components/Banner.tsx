@@ -1,74 +1,72 @@
 import NewWtbBanner from './widgets/NewWtbBanner';
 import BuyTranslationsBanner from './widgets/BuyTranslationsBanner';
 import CertifiedBanner from './widgets/CertifiedBanner';
+import { IBanner } from '../model/IBanner';
 
-type Buttons = {
-	id: number;
-	btnText: string;
-};
-
-type Props = {
-	id: number;
-	imgHeader: string;
-	txtHeader: string;
-	txtDescription: string;
-	imgBackground: string;
-	buttons: Buttons[];
-};
-
-const Banner = (props: Props) => {
-	if (props.id == 1) {
+const Banner = ({
+	id,
+	imgHeader,
+	txtHeader,
+	txtDescription,
+	imgBackground,
+	buttons,
+}: IBanner) => {
+	if (id == 1) {
 		return (
 			<>
 				<NewWtbBanner
-					id={props.id}
-					txtHeader={props.txtHeader}
-					txtDescription={props.txtDescription}
-					imgBackground={props.imgBackground}
-					buttons={props.buttons}
+					id={id}
+					imgHeader={''}
+					txtHeader={txtHeader}
+					txtDescription={txtDescription}
+					imgBackground={imgBackground}
+					buttons={buttons}
 				/>
 			</>
 		);
 	}
 
-	if (props.id == 2) {
+	if (id == 2) {
 		return (
 			<div className='one-column-layout-row main-placement-2'>
 				<BuyTranslationsBanner
-					id={props.id}
-					txtHeader={props.txtHeader}
-					txtDescription={props.txtDescription}
-					imgBackground={props.imgBackground}
-					buttons={props.buttons}
+					id={id}
+					imgHeader={''}
+					txtHeader={txtHeader}
+					txtDescription={txtDescription}
+					imgBackground={imgBackground}
+					buttons={buttons}
 					style={{}}
 				/>
 			</div>
 		);
 	}
 
-	if (props.id == 3) {
+	if (id == 3) {
 		return (
 			<div className='one-column-layout-row main-placement-3'>
 				<BuyTranslationsBanner
-					id={props.id}
-					txtHeader={props.txtHeader}
-					txtDescription={props.txtDescription}
-					imgBackground={props.imgBackground}
-					buttons={props.buttons}
+					id={id}
+					imgHeader={''}
+					txtHeader={txtHeader}
+					txtDescription={txtDescription}
+					imgBackground={imgBackground}
+					buttons={buttons}
 					style={{ order: '1', marginLeft: '95px' }}
 				/>
 			</div>
 		);
 	}
 
-	if (props.id == 4) {
+	if (id == 4) {
 		return (
 			<CertifiedBanner
-				id={props.id}
-				imgHeader={props.imgHeader}
-				txtHeader={props.txtHeader}
-				txtDescription={props.txtDescription}
-				imgBackground={props.imgBackground}
+				id={id}
+				imgHeader={imgHeader}
+				txtHeader={txtHeader}
+				txtDescription={txtDescription}
+				imgBackground={imgBackground}
+				buttons={[]}
 			/>
 		);
 	}
