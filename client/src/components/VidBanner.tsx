@@ -8,10 +8,6 @@ import { IButton } from '../model/IButton';
 const VidBanner = () => {
 	const { loading, error, data } = useQuery(GET_VIDBANNERS);
 
-	if (loading) {
-		return <h1>loading</h1>;
-	}
-
 	if (error) {
 		return <h1>error</h1>;
 	}

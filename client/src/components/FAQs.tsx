@@ -6,10 +6,6 @@ import FAQ from './widgets/FAQ';
 const FAQs = () => {
 	const { loading, error, data } = useQuery(GET_FAQS);
 
-	if (loading) {
-		return <h1>loading</h1>;
-	}
-
 	if (error) {
 		<h1>Error</h1>;
 	}

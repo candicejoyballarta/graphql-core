@@ -21,10 +21,6 @@ const Carousel = () => {
 		slider.current!.slickPrev();
 	};
 
-	if (loading) {
-		return <h1>loading</h1>;
-	}
-
 	if (error) {
 		<h1>Error</h1>;
 	}

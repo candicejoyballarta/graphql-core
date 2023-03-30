@@ -6,10 +6,6 @@ import { GET_BANNERS } from '../queries/rootQueries';
 const Banners = () => {
 	const { loading, error, data } = useQuery(GET_BANNERS);
 
-	if (loading) {
-		return <h1>loading</h1>;
-	}
-
 	if (error) {
 		<h1>Error</h1>;
 	}
